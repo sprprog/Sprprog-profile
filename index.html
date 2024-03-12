@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+    <title>profile sprprog</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .content {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s, transform 1s;
+        }
+
+        .content.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var sections = document.querySelectorAll('.content');
+
+            window.addEventListener('scroll', function () {
+                sections.forEach(function (section) {
+                    var sectionTop = section.getBoundingClientRect().top;
+                    var windowHeight = window.innerHeight;
+
+                    if (sectionTop < windowHeight) {
+                        section.classList.add('animated', 'fadeInUp');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="content">
+    <div class="master">
+        <div class="header">
+            <div class="logo">
+                <img class="logo-1" src="logo/my profile.png" style="width: 60px;">
+            </div>
+            <nav class="nav">
+                <a href="#" onclick="scrollToElement('.master')">Home</a>
+                <a class="link1" href="#" onclick="scrollToElement('.about')">About</a>
+                <a class="link2" href="#" onclick="scrollToElement('.project')">Projects</a>
+                <a class="link3" href="#" onclick="scrollToElement('.footer-contact')">Contact</a>
+            </nav>
+        </div>
+        <div class="article">
+            <article>
+                <div class="article-logo">
+                    <img src="logo/my profile2.jpg" style="width: 400px; direction: rtl;">
+                </div>
+                <div class="article-p">
+                    <h5>Mastering languages, artist in every code!</h5>
+                    <h2>Hello, I am a Full stack developer </h2>
+                    <p>I am a front end site and application developer</p>
+                </div>
+            </article>
+        </div><br><br>
+        <div class="aside">
+            <aside>
+                <div class="aside-logo">
+                    <h3>Skills</h3>
+                    <img src="logo/react.png" style="max-width: 70px;">
+                    <img src="logo/css.png" style="width: 50px;" >&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="logo/html.png" style="width: 90px;">
+                    <img src="logo/js.png" style="width: 50px;">
+                    <img src="logo/php.png" style="width: 80px;">
+                </div>
+            </aside>
+        </div><br><br><br>
+        <div style="max-width: 1200px; margin: auto;" class="Aboutme">
+            <h2 style="font-family: grap; text-align: center; ">About</h2>
+            <div class="about">
+                <div class="about-img" style="width: 300px; height: 300px;">
+                    <img src="logo/my profile2.jpg" style="width: 290px;" alt="Sprprog">
+                </div><br>
+                <div class="about-p">
+                    <p>
+                        Hello, my name is Sepehr. <br> I have been working in the field of web programming for almost 2 years  and I can prepare all kinds of sites for you in a short time. Also <br>, the programming languages ​​that I specialize in are : <br> <i class="ri-html5-line"></i>html, <i class="ri-css3-line"></i>css, <i class="ri-javascript-line"></i>java script, <i class="ri-reactjs-line"></i>react, php
+                    </p> 
+                </div>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="project">
+            <h2>project</h2>
+            <div class="project-p">
+                <h3>opps!</h3>
+                <p>Since I have personally done work for my businesses in these two years and now they are bankrupt and I don't have a project to show you, but I can provide you with my Github my profile. <br><a target="_blank" href="https://github.com/sprprog"><i class="ri-github-fill"></i></a></p>
+            </div>
+        </div><br><br><br><br><br><br>
+        <div class="footer-contact">
+            <div class="footer-logo">
+                <img src="logo/my profile.png" style="width: 60px;" >
+            </div>
+            <div class="my-conection">
+                <div class="foooter-email">
+                    <h2>my conections</h2>
+                    <p><i class="ri-mail-line"></i>msepehrprog@gmail.com</p>
+                    <div class="footer-conection1">
+                        <p><a target="_blank" class="github" href="https://github.com/sprprog"><i class="ri-github-fill"></i></a></p>
+                    </div>
+                    <div class="footer-conection2">
+                      
+                        <p ><a target="_blank" class="youtube" href="https://www.youtube.com/channel/UCBH2id3wY6St5QwT-ad52sg"><i class="ri-youtube-fill"></i></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        function scrollToElement(elementSelector) {
+            const elements = document.querySelectorAll(elementSelector);
+
+            if (elements.length > 0) {
+                elements[0].scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        const link1 = document.querySelector(".link1");
+        const link2 = document.querySelector(".link2");
+        const link3 = document.querySelector(".link3");
+
+        link1.addEventListener('click', () => {
+            scrollToElement('.Aboutme');
+        });
+
+        link2.addEventListener('click', () => {
+            scrollToElement('.project');
+        });
+
+        link3.addEventListener('click', () => {
+            scrollToElement('.footer-contact');
+        });
+    </script>
+</body>
+</html>

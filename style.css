@@ -1,0 +1,211 @@
+@charset "utf-8";
+@font-face {
+    font-family: grap;
+    src: url(fonts/Graphik\ Arabic\ Bold.otf);
+}
+body{
+    background-color: white;
+    animation: animition 30s infinite;
+}
+.master{
+    max-width: 1200px;
+    margin: auto;
+}
+.nav{
+    direction: rtl;
+    margin-top: -43px;
+}
+.logo{
+    direction: ltr;
+    display: flex;
+}
+nav a{
+    font-family: grap;
+    text-decoration: none;
+    font-size: 18px;
+    animation: animition2 30s infinite;
+    color: black;
+    margin-left: 10px;
+}
+.article{
+    max-width: 1200px;
+    margin: auto;
+    color: black;
+    animation: animition2 30s infinite;
+}
+.article-logo{
+    overflow: hidden;
+    background-size: cover;
+    max-width: 400px;
+    box-shadow: 2px 4px 16px black;
+    border-radius: 100%;
+    margin-top: 150px;
+    direction: rtl;
+}
+.article-p{
+    direction: rtl;
+    margin-top: -180px;
+    font-size: 20px;
+    font-family: grap;
+}
+
+aside{
+    font-family: grap;
+    max-width: 1200px;
+    color: black;
+    animation: animition2 30s infinite;
+    margin: auto;
+}
+.aside-logo{
+    text-align: center;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    margin: auto;
+}
+.about{
+    max-width: 600px;
+    width: 600px;
+    border-radius: 12px;
+    color: black;
+    margin: auto;
+    box-shadow: 4px 4px 16px black;
+        height: 320px;
+}
+.about-img {
+    max-width: 300px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 16px black;
+    float: left;
+    margin: 10px;
+}
+.about-img img{
+    margin: 5px;
+    border-radius: 12px;
+}
+.about-p{
+    max-width: 600px;
+    justify-content: end;
+    width: 580px;
+font-family: grap;
+border-radius: 12px;
+margin: 10px;
+}
+.project{
+    max-width: 1200px;
+    margin: auto;
+    font-family: grap;
+    text-align: center;
+}
+.project-p{
+    box-shadow: 2px 4px 16px black;
+    overflow: hidden;
+    border-radius: 12px;
+    height: 155px;
+    max-width: 1200px;
+    margin: auto;
+    width: 600px;
+}
+a i{
+font-size: 30px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.footer-contact{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    font-family: grap;
+}
+.footer-email{
+    display: flex;
+    float: left;
+}
+.footer-email h2{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+.myconection{
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+/*for responsive site*/
+@media screen and (max-width: 900px) {
+    /* قوانین CSS خاص برای صفحه‌های با عرض کمتر از 600 پیکسل */
+    .nav{
+        margin-right: 10px;
+        font-size: 15px;
+    }
+    .logo{
+        margin-left: 10px;
+    }
+   .article-p{
+    margin-top: 10px;
+    font-size: 15px;
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+   }
+   .article-logo{
+    margin: auto;
+    margin-top: 50px;
+   }
+   .about{
+    max-width: 310px;
+    float: none;
+    width: 400px;
+    height: 500px;
+    font-size: 15px;
+    text-align: center;
+    margin: auto;
+   }
+   .about-img{
+    float: none;
+    margin: auto;
+     max-width: 300px;
+     max-height: 300px; 
+   }
+   .about-p{
+    max-width: 300px;
+   }
+   .project{
+    max-width: 300px;
+    margin: auto;
+   }
+   .project-p{
+    max-width: 300px;
+    height: 210px;
+   }
+    
+}
+@media screen and (max-width: 370px){
+    .logo-1{
+        display: none;
+    }
+    .nav {
+        max-width: 370px;
+         margin: auto;
+    }
+    .nav a{
+        margin-right: 10px;
+    }
+}
+.github{
+    transition: all  .3s ease;
+}
+.github:hover{
+    color: rgb(107, 0, 247);
+}
+.youtube{
+    transition: all .3s ease;
+}
+.youtube:hover{
+    color: red;
+}
